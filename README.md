@@ -65,15 +65,7 @@ project-root/
 - **SpaceX API**
 - **Bootstrap (for styling)**
 
-## 📌 API Endpoint
-The application fetches data from the SpaceX API:
-```
-https://api.spacexdata.com/v4/launches
-```
 
-## 📜 License
-This project is licensed under the MIT License.
 
----
-Made with ❤️ by [Your Name]
+
 
