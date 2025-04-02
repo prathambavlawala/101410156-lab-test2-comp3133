@@ -1,0 +1,78 @@
+<h2>Mission List</h2>
+<div>
+  <label>Filter by Launch Year:</label>
+  <input type="text" [(ngModel)]="year" />
+  <button (click)="applyFilters()">Filter</button>
+</div>
+
+<div>
+  <h4>Launch</h4>
+  <label><input type="radio" name="launch" value="true" [(ngModel)]="launchSuccess" /> Successful</label>
+  <label><input type="radio" name="launch" value="false" [(ngModel)]="launchSuccess" /> Failed</label>
+</div>
+<div>
+  <h4>Landing</h4>
+  <label><input type="radio" name="landing" value="true" [(ngModel)]="landingSuccess" /> Successful</label>
+  <label><input type="radio" name="landing" value="false" [(ngModel)]="landingSuccess" /> Failed</label>
+</div>
+
+<button (click)="resetFilters()">Reset Filters</button>
+
+<div *ngFor="let launch of filteredLaunches" (click)="goToDetails(launch.flight_number)" style="background: lightblue; padding: 20px; margin: 10px; border: 1px solid #000; border-radius: 8px; cursor: pointer;">
+  <img [src]="launch.links.mission_patch_small" alt="patch" style="height: 100px; float: left; margin-right: 20px;">
+  <h3>{{ launch.mission_name }}</h3>
+  <p><strong>{{ launch.launch_year }}</strong></p>
+  <p>{{ launch.details || 'No description available' }}</p>
+  <div style="clear: both;"></div>
+</div>
+
+
+
+
+<!--<div class="global-header">COMP 3133 | Lab Test2 | SpaceX API</div>
+<div class="mission-page">
+  <aside class="filters">
+    <h3>Launch Date</h3>
+    <div class="filter-group">
+      <button *ngFor="let y of [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020]"
+              (click)="year = y.toString(); applyFilters()"
+              [class.active]="year === y.toString()">
+        {{ y }}
+      </button>
+    </div>
+
+    <h4>Successful Launch</h4>
+    <div class="filter-group">
+      <button (click)="launchSuccess = 'true'; applyFilters()" [class.active]="launchSuccess==='true'">true</button>
+      <button (click)="launchSuccess = 'false'; applyFilters()" [class.active]="launchSuccess==='false'">false</button>
+    </div>
+
+    <h4>Successful Land</h4>
+    <div class="filter-group">
+      <button (click)="landingSuccess = 'true'; applyFilters()" [class.active]="landingSuccess==='true'">true</button>
+      <button (click)="landingSuccess = 'false'; applyFilters()" [class.active]="landingSuccess==='false'">false</button>
+    </div>
+
+    <button class="reset-btn" (click)="resetFilters()">Reset Filters</button>
+  </aside>
+
+  <section class="missions">
+    <div class="mission-card" *ngFor="let launch of filteredLaunches" (click)="goToDetails(launch.flight_number)">
+      <img [src]="launch.links.mission_patch_small" alt="patch">
+      <h4>{{ launch.mission_name }} #{{ launch.flight_number }}</h4>
+      <p><strong>Mission Ids:</strong> {{ launch.mission_id?.join(', ') || '-' }}</p>
+      <p><strong>Launch Year:</strong> {{ launch.launch_year }}</p>
+      <p><strong>Successful Launch:</strong> {{ launch.launch_success ? 'Yes' : 'No' }}</p>
+      <p><strong>Successful Landing:</strong>
+        {{ launch.rocket?.first_stage?.cores[0]?.land_success === null ? 'No Data' : (launch.rocket.first_stage.cores[0].land_success ? 'Yes' : 'No') }}
+      </p>
+    </div>
+  </section>
+</div>
+
+!-->
+
+
+
+
+

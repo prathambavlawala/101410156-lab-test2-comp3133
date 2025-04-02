@@ -1,0 +1,8 @@
+.global-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  

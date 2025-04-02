@@ -1,0 +1,116 @@
+.global-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  color: #1c1c1c;
+}
+
+.mission-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.filters {
+  flex: 0 0 250px;
+  padding: 20px;
+  background-color: #f7f8fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.filters h3, .filters h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-group button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-group button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.filter-group button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.reset-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 16px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #333;
+}
+
+.missions {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.mission-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mission-card img {
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .mission-page {
+    flex-direction: column;
+  }
+
+  .missions {
+    grid-template-columns: 1fr;
+  }
+}
