@@ -10,25 +10,6 @@ This Angular application displays a list of SpaceX missions and provides detaile
 - Uses Angular's **Standalone Components** (No `app.module.ts`)
 - Implements **Routing** with `app.config.ts`
 
-## 📂 Folder Structure
-```
-project-root/
-│-- src/
-│   │-- app/
-│   │   │-- app.component.ts
-│   │   │-- app.component.html
-│   │   │-- app.config.ts
-│   │   │-- missionlist/
-│   │   │   │-- missionlist.component.ts
-│   │   │   │-- missionlist.component.html
-│   │   │-- missiondetails/
-│   │   │   │-- missiondetails.component.ts
-│   │   │   │-- missiondetails.component.html
-│   │-- assets/
-│   │   │-- placeholder.png
-│   │-- main.ts
-│-- README.md
-```
 
 ## 🖼 Screenshots
 ### 1️⃣ Mission List Page
