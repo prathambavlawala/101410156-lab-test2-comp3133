@@ -53,9 +53,13 @@ project-root/
    ```sh
    ng serve
    ```
-4. Open in browser:
+4. Open in local browser:
    ```
    http://localhost:4200
+   ```
+4. Open in browser:
+   ```
+   https://101410156-lab-test2-comp3133-ey86.vercel.app/missions
    ```
 
 ## 🛠 Technologies Used
