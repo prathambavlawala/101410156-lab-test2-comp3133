@@ -1,64 +1,79 @@
+# 🚀 SpaceX Missions Angular App
 
-# 101410156LabTest2Comp3133
+## 📌 Overview
+This Angular application displays a list of SpaceX missions and provides detailed information about each mission. It is built using **Angular 16+** with **standalone components**, **Angular Router**, and **SpaceX API**.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+## 🛠 Features
+- Fetch and display a list of SpaceX missions
+- View details of each mission
+- Navigate between mission list and mission details
+- Uses Angular's **Standalone Components** (No `app.module.ts`)
+- Implements **Routing** with `app.config.ts`
 
-## Development Server
-
-Run `ng serve` to start the development server. Navigate to `http://localhost:4200/` in your browser. The application will automatically reload if you make any changes to the source files.
-
-## Code Scaffolding
-
-To generate a new component, directive, pipe, service, class, guard, interface, enum, or module, use the following commands:
-
-- `ng generate component <component-name>`
-- `ng generate directive <directive-name>`
-- `ng generate pipe <pipe-name>`
-- `ng generate service <service-name>`
-- `ng generate class <class-name>`
-- `ng generate guard <guard-name>`
-- `ng generate interface <interface-name>`
-- `ng generate enum <enum-name>`
-- `ng generate module <module-name>`
-
-## Build
-
-To build the project for production, use the following command:
-
-```bash
-ng build --prod
+## 📂 Folder Structure
+```
+project-root/
+│-- src/
+│   │-- app/
+│   │   │-- app.component.ts
+│   │   │-- app.component.html
+│   │   │-- app.config.ts
+│   │   │-- missionlist/
+│   │   │   │-- missionlist.component.ts
+│   │   │   │-- missionlist.component.html
+│   │   │-- missiondetails/
+│   │   │   │-- missiondetails.component.ts
+│   │   │   │-- missiondetails.component.html
+│   │-- assets/
+│   │   │-- placeholder.png
+│   │-- main.ts
+│-- README.md
 ```
 
-The build artifacts will be stored in the `dist/` directory. You can deploy this directory to your web server.
+## 🖼 Screenshots
+### 1️⃣ Mission List Page
+![image](https://github.com/user-attachments/assets/6fc21aa2-a6ce-4c50-abac-a3b516d311dc)
 
-## Running Unit Tests
 
-Run `ng test` to execute unit tests via [Karma](https://karma-runner.github.io). This will launch the test runner and provide feedback in the terminal about the status of your tests.
+### 2️⃣ Mission Details Page
+![image](https://github.com/user-attachments/assets/a20855c5-0e26-46a0-bfc4-4ad84d8c79cb)
 
-## Running End-to-End Tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. Before running this command, make sure to add a package that implements end-to-end testing capabilities, such as Protractor or Cypress.
+## 🚀 Installation & Running
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo.git
+   cd your-repo
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the application:
+   ```sh
+   ng serve
+   ```
+4. Open in browser:
+   ```
+   http://localhost:4200
+   ```
 
-## Code Linting
+## 🛠 Technologies Used
+- **Angular 16+** (Standalone Components)
+- **TypeScript**
+- **Angular Router**
+- **SpaceX API**
+- **Bootstrap (for styling)**
 
-You can lint your Angular project by running:
-
-```bash
-ng lint
+## 📌 API Endpoint
+The application fetches data from the SpaceX API:
+```
+https://api.spacexdata.com/v4/launches
 ```
 
-This will check your code for any stylistic or programming errors and recommend improvements.
+## 📜 License
+This project is licensed under the MIT License.
 
-## Further Help
+---
+Made with ❤️ by [Your Name]
 
-For more information on using the Angular CLI, run:
-
-```bash
-ng help
-```
-
-Alternatively, check out the [Angular CLI Overview and Command Reference](https://angular.io/cli).
-
-## Deployment
-
-For deployment purposes, you can build the project using `ng build --prod`, and upload the `dist/` folder contents to a server of your choice (e.g., AWS S3, Firebase Hosting, or any other static hosting service).
